@@ -28,8 +28,9 @@ Constraints:
 """
 What to remember from this problem:
 
-11:10 AMClaude responded: Your initial approach was correct in spirit — use XOR to find duplicates.Your initial approach was correct in spirit — use XOR to find duplicates. But you were thinking of it as a search problem (for each element, scan the rest of the array to find its pair), when it's actually an accumulation problem (XOR everything together in one pass and let the math do the work).
-Same mistake showed up in your code: you reached for map (applies a function to each element independently) when you needed reduce (carries a result forward across the whole list).
+My initial approach was correct in spirit — use XOR to find duplicates.
+But I was thinking of it as a search problem (for each element, scan the rest of the array to find its pair), when it's actually an accumulation problem (XOR everything together in one pass and let the math do the work).
+Same mistake showed up in code: I reached for map (applies a function to each element independently) when I needed reduce (carries a result forward across the whole list).
 
 
 XOR properties: a ^ a = 0, 0 ^ a = a, and it's commutative/associative — order doesn't matter.
