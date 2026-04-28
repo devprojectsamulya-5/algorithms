@@ -24,18 +24,22 @@ Constraints:
 1 <= nums.length <= 10000
 -10000 <= nums[i] <= 10000
 """
-
 """
-What to remember from this problem:
-
+How I did:
 My initial approach was correct in spirit — use XOR to find duplicates.
 But I was thinking of it as a search problem (for each element, scan the rest of the array to find its pair), when it's actually an accumulation problem (XOR everything together in one pass and let the math do the work).
 Same mistake showed up in code: I reached for map (applies a function to each element independently) when I needed reduce (carries a result forward across the whole list).
 
+"""
+"""
+What to remember from this problem:
 
 XOR properties: a ^ a = 0, 0 ^ a = a, and it's commutative/associative — order doesn't matter.
 This is a classic "find the unique element" pattern using bit manipulation.
 reduce is your tool when you need to accumulate a result across a list; map is for independent transformations.
+
+LeetCode 137 — Single Number II: Every element appears three times except one. XOR alone won't work here — forces you to think deeper about bit manipulation.
+LeetCode 260 — Single Number III: Two elements appear once, everything else twice. You'll need to build on the XOR trick with a clever twist.
 """
 
 
